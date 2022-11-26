@@ -1,6 +1,6 @@
 # ImmoScrapper
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a PWA implemented with Vue 3 in Vite.
 
 ## Recommended IDE Setup
 
@@ -23,20 +23,31 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
 
-```sh
-npm install
-```
+To run the project locally, make sure the base dir is set to `/`  
+For deployment, the base dir needs to be `/ImmoScrapper/`  
+Change it in:  
+`vite.config.ts` (parameter: `base`, `VitePWA.base` and `VitePWA.manifest.start_url`)
 
-### Compile and Hot-Reload for Development
+The manifest can also be changed in `vite.config.ts`
+
+### Developing
 
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+### Test locally
 
 ```sh
 npm run build
+npx http-server dist
+```
+### Deploying to github pages
+
+```sh
+git add dist -f 
+git commit -m "..."
+git subtree push --prefix dist origin gh-pages
 ```
 
 ### Run Unit Tests with [Vitest](https://vitest.dev/)
