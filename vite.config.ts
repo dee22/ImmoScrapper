@@ -11,7 +11,7 @@ export default defineConfig({
     vue(),
     VitePWA({
       mode: "development",
-      base: "/",
+      base: "/ImmoScrapper/",
       srcDir: "src",
       filename: "sw.ts",
       includeAssets: ["/favicon.png"],
@@ -20,7 +20,7 @@ export default defineConfig({
         name: "ImmoScrapper",
         short_name: "ImmoScrapper",
         theme_color: "#ffffff",
-        start_url: "/",
+        start_url: "/ImmoScrapper/",
         display: "standalone",
         background_color: "#ffffff",
         icons: [
